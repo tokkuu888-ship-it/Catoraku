@@ -1,15 +1,21 @@
 import React from 'react';
+import MyUpcomingSeminarCard from '../components/cards/MyUpcomingSeminarCard';
+import SubmitProgressReportCard from '../components/cards/SubmitProgressReportCard';
+import MyProgressTimelineCard from '../components/cards/MyProgressTimelineCard';
+import FeedbackReceivedCard from '../components/cards/FeedbackReceivedCard';
+import NextMilestonesCard from '../components/cards/NextMilestonesCard';
 
-const StudentDashboard = () => (
-  <div style={{ padding: 24 }}>
-    <h2>Student Dashboard</h2>
-    <ul>
-      <li>View Seminar Schedule</li>
-      <li>Submit Progress Report</li>
-      <li>Join Seminar Session</li>
-      <li>View Feedback</li>
-    </ul>
-  </div>
-);
-
-export default StudentDashboard;
+export default function StudentDashboard() {
+  return (
+    <div>
+      <h1>PhD Student Dashboard</h1>
+      <div className="dashboard-cards">
+        <MyUpcomingSeminarCard />
+        <SubmitProgressReportCard />
+        <MyProgressTimelineCard />
+        <FeedbackReceivedCard />
+        <NextMilestonesCard />
+      </div>
+    </div>
+  );
+}

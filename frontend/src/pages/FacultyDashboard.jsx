@@ -1,15 +1,19 @@
 import React from 'react';
+import AssignedSessionsCard from '../components/cards/AssignedSessionsCard';
+import StudentProgressReportsCard from '../components/cards/StudentProgressReportsCard';
+import EvaluationPanelCard from '../components/cards/EvaluationPanelCard';
+import SubmitFeedbackCard from '../components/cards/SubmitFeedbackCard';
 
-const FacultyDashboard = () => (
-  <div style={{ padding: 24 }}>
-    <h2>Faculty Dashboard</h2>
-    <ul>
-      <li>View Seminar Schedule</li>
-      <li>Review Progress Reports</li>
-      <li>Participate in Seminar</li>
-      <li>Provide Feedback</li>
-    </ul>
-  </div>
-);
-
-export default FacultyDashboard;
+export default function FacultyDashboard() {
+  return (
+    <div>
+      <h1>Faculty Dashboard</h1>
+      <div className="dashboard-cards">
+        <AssignedSessionsCard />
+        <StudentProgressReportsCard />
+        <EvaluationPanelCard />
+        <SubmitFeedbackCard />
+      </div>
+    </div>
+  );
+}
